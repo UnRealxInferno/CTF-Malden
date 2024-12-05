@@ -1,0 +1,80 @@
+class Header
+{
+	gameType =  CTF; 
+	minPlayers =  1;
+	maxPlayers = 60; 
+};
+author = "Asaayu & Inferno";
+OnLoadName = "Capture the Flag | Malden";
+briefingName = "Capture the Flag | Malden";
+OnLoadMission = "Blufor and Opfor forces fight to secure a flag before time runs out!";
+onLoadMissionTime = 0;
+respawnButton = 0;
+respawn = "BASE";
+respawnDelay = 10;
+respawnVehicleDelay = 99999999;
+respawnDialog = 0;
+respawnOnStart = -1;
+briefing = 0;
+debriefing = 0;
+aiKills = 0;
+corpseManagerMode = 2;
+corpseLimit = 15;
+corpseRemovalMinTime = 30;
+corpseRemovalMaxTime = 1200;
+wreckManagerMode = 1;
+wreckLimit = 4;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 600;
+minPlayerDistance = 15;
+disabledAI = 1;
+enableDebugConsole = 1;
+enableTeamSwitch = 0;
+joinUnassigned = 1;
+onCheat = "";
+
+showHUD[] = {
+	true,	// Scripted HUD (same as showHUD command)
+	true,	// Vehicle + soldier info
+	false,	// Vehicle radar [HIDDEN]
+	false,	// Vehicle compass [HIDDEN]
+	true,	// Tank direction indicator
+	false,	// Commanding menu
+	false,	// Group Bar
+	true,	// HUD Weapon Cursors
+	true	// Vehicle display panels
+};
+
+class Params
+{
+	class Daytime
+	{
+		title = "TIME";
+		texts[] = {"Morning","Day","Evening","Night"};
+		values[] = {6,12,18,0};
+		default = 12;
+		function = "BIS_fnc_paramDaytime"; 
+		isGlobal = 1;
+	};
+	class ViewDistance
+	{
+		title = "VIEW DISTANCE";
+		texts[] = {"500m","1000m","2000m","5000m"};
+		values[] = {500,1000,2000,5000};
+		default = 5000;
+	};
+	class MissionTime
+	{
+		title = "MISSION TIME LIMIT";
+		texts[] = {"Debug","5m","15m","30m","45m","1h","1h30m","2h","4h","5h","6h"};
+		values[] = {1,5,15,30,45,60,90,120,240,300,360};
+		default = 60;
+	};
+	class FlagLimit
+	{
+		title = "SCORE LIMIT";
+		texts[] = {"1","2","3","4","5","6","7","8","9","10","20","25","Unlimited"};
+		values[] = {"1","2","3","4","5","6","7","8","9","10","20","25","9999"};
+		default = 2;
+	};
+};
