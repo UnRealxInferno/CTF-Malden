@@ -1,3 +1,4 @@
+//Do not change any of this unless you know what you are doing, you will break the entire file if you change things here.
 //============================
 //Setting up mission params
 private _timeLimit = paramsArray select 2;
@@ -20,7 +21,7 @@ hhu = true;
 
 // Define possible flag locations in Malden
 flagLocations = [
-    [8118.91,10066.5,0], // Example coordinates
+    [8118.91,10066.5,0], // Coordinates of flag
     [7239.13,7930.18,0],
     [5663.35,7001.98,0],
     [3544.74,3287.13,0]
